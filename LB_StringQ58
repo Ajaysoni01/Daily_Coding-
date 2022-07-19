@@ -1,0 +1,25 @@
+ Q. A Program to check if strings are rotations of each other or not
+ package L_B481Q;
+
+public class duplicatesQ58 {
+    static final int NO_CHAR = 256;
+    static void FillCharCounts(String str ,int [] count){
+        for (int i= 0; i<str.length(); i++){
+            count[str.charAt(i)]++;
+        }
+    }
+    static void printDups(String str){
+        int count[] = new int[NO_CHAR];
+        FillCharCounts(str, count);
+        for (int i = 0; i<NO_CHAR; i++)
+            if (count[i]>1)
+            System.out.println((char)(i) + ", count = " + count[i]);
+    }
+
+    public static void main(String[] args) {
+        String str =  "Program to Find Duplicate character ";
+        printDups(str);
+    }
+
+
+}
