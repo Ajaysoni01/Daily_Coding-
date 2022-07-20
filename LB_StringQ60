@@ -1,0 +1,25 @@
+A Program to check if strings are rotations of each other or not
+package L_B481Q;
+
+import java.util.Scanner;
+
+public class L_BQ60 {
+    static boolean areRotation(String s1, String s2){
+        return (s1.length()==s2.length()) && ((s1+s2).indexOf(s2)!=-1);
+    }
+
+    public static void main(String[] args) {
+        String s1 = "AABC";
+        String s2 = "ACDA";
+        if (areRotation(s1,s2)){
+            System.out.println("String are rotation of each other");
+        }
+        else {
+            System.out.println("String are not rotation each other");
+        }
+    }
+
+}
+
+Output-
+String are rotation of each other
